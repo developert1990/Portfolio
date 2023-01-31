@@ -1,0 +1,94 @@
+@import "./variables";
+@import "./mixin";
+@import "./components/main.scss";
+@import "./components/navigation.scss";
+@import "./components/home.scss";
+@import "./components/contact.scss";
+@import "./components/about.scss";
+@import "./components/skills.scss";
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    background-color: #000;
+    font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    line-height: 1.3;
+    color: $lightGrey;
+}
+
+section {
+    min-height: 100vh;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: $lightGrey;
+
+    &:hover {
+        color: $lightOrange;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.numbered-heading {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: clamp(26px, 5vw, 32px);
+    white-space: nowrap;
+
+    &::before {
+        counter-increment: section 1;
+        content: "0" counter(section) ".";
+        position: relative;
+        bottom: 4px;
+        margin-right: 10px;
+        color: $lightOrange;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+        font-size: clamp(16px, 3vw, 32px);
+        font-weight: 400;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: -5px;
+        width: 300px;
+        height: 1px;
+        margin-left: 20px;
+        background-color: $lightGrey;
+        margin-top: 15px;
+    }
+}
+
+@include desktop {
+    secsion {
+        height: 100vh;
+    }
+}
+
+@include tablet {
+    #about {
+    }
+}
+
+@include mobile {
+    #about {
+    }
+}

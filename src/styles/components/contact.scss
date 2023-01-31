@@ -1,0 +1,42 @@
+#contact {
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    bottom: 50px;
+    right: auto;
+    z-index: 10;
+
+    li {
+        list-style: none;
+        width: 40px;
+        height: 46px;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@include desktop {
+    #contact {
+        width: 40px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@include tablet {
+    #contact {
+        display: none;
+    }
+}
+
+@include mobile {
+    #contact {
+        display: none;
+    }
+}

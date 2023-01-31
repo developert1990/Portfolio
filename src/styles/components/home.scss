@@ -1,0 +1,100 @@
+#home {
+    h1 {
+        color: $lightOrange;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    }
+    h2 {
+        color: $smoothWhite;
+        margin: 0px;
+    }
+
+    h3 {
+        margin: 0px;
+        color: $lightGrey;
+    }
+
+    p {
+        max-width: 540px;
+        color: $lightGrey;
+    }
+
+    .resume-button {
+        color: $lightOrange;
+        background-color: transparent;
+        border: 1px solid $lightOrange;
+        border-radius: 4px;
+        padding: 1.25rem 1.75rem;
+        font-size: 14px;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+        line-height: 1;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        margin-top: 50px;
+        display: inline-block;
+        &:hover {
+            background-color: $orangeTint;
+            outline: none;
+        }
+    }
+
+    // https://www.shapedivider.app/
+    .custom-shape-divider-bottom-1675062100 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1675062100 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 130px;
+    }
+
+    .custom-shape-divider-bottom-1675062100 .shape-fill {
+        fill: #ffffff10;
+    }
+}
+
+@include desktop {
+    #home {
+        h1 {
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 60px;
+        }
+
+        h3 {
+            font-size: 60px;
+        }
+    }
+}
+
+@include tablet {
+    #home {
+        h2 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 40px;
+        }
+    }
+}
+
+@include mobile {
+    #home {
+        h2 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+    }
+}

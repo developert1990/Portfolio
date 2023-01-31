@@ -1,0 +1,22 @@
+.main {
+    min-height: 100vh;
+    counter-reset: section 0;
+}
+
+@include desktop {
+    .main {
+        padding: 0px 150px;
+    }
+}
+
+@include tablet {
+    .main {
+        padding: 0px 100px;
+    }
+}
+
+@include mobile {
+    .main {
+        padding: 0px 50px;
+    }
+}
