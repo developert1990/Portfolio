@@ -23,10 +23,10 @@
         }
 
         .react-tabs__tab--selected {
-            color: $lightOrange;
+            color: $mainColor;
             background-image: $blackLinearBG;
 
-            border-left: 2px solid $lightOrange;
+            border-left: 2px solid $mainColor;
         }
     }
 
@@ -39,7 +39,7 @@
         margin-bottom: 10px;
 
         span {
-            color: $lightOrange;
+            color: $mainColor;
         }
 
         @include triangle;

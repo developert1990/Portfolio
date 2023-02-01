@@ -41,7 +41,7 @@ a {
     color: $lightGrey;
 
     &:hover {
-        color: $lightOrange;
+        color: $mainColor;
         transition: all 0.2s ease-in-out;
     }
 }
@@ -63,7 +63,7 @@ a {
         position: relative;
         bottom: 4px;
         margin-right: 10px;
-        color: $lightOrange;
+        color: $mainColor;
         font-family: $fontMono;
         font-size: clamp(16px, 3vw, 32px);
         font-weight: 400;

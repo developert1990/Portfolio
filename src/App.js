@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Main } from "./components/Main/Main";
 import { Navigation } from "./components/Navigation/Navigation";
 

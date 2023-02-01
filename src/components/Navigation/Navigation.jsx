@@ -1,5 +1,5 @@
 import anime from "animejs";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { HamburgerIcon } from "./HamburgerIcon";
 
 export const Navigation = () => {
@@ -12,14 +12,34 @@ export const Navigation = () => {
         });
     }, []);
 
+    const targetRef = useRef(null);
+    const handleScroll = useCallback(() => {
+        console.log("scroll");
+        if (window.scrollY > 100) {
+            //130 일때
+            targetRef.current.classList.add("nav-scrolled");
+        } else {
+            targetRef.current.classList.remove("nav-scrolled");
+        }
+    });
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            window.addEventListener("scroll", handleScroll);
+        }, 100);
+        return () => {
+            clearInterval(timer);
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <div id="navigation-wrapper">
+        <div id="navigation-wrapper" ref={targetRef}>
             <div className="navigation">
                 <a href="/">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
                             <path
-                                fill="#f79a53"
                                 className="my-line"
                                 d="M1559 5102 c-79 -21 -156 -69 -207 -128 l-37 -43 -55 19 c-111 39
                                 -266 18 -374 -50 -61 -39 -138 -118 -173 -177 -57 -97 -75 -168 -81 -310 l-5
@@ -49,7 +69,6 @@ export const Navigation = () => {
                                 289 194 30 27 56 48 56 47 1 0 25 -43 53 -94z"
                             />
                             <path
-                                fill="#f79a53"
                                 className="my-line"
                                 d="M960 2908 c-20 -22 -20 -22 -18 -1178 l3 -1155 27 -80 c39 -114 92
                                 -199 178 -285 220 -220 526 -270 810 -133 82 39 108 58 185 137 73 73 99 108
@@ -65,20 +84,17 @@ export const Navigation = () => {
                                 36 -109 4z"
                             />
                             <path
-                                fill="#f79a53"
                                 className="my-line"
                                 d="M2205 2715 c-23 -22 -25 -32 -25 -110 0 -78 2 -88 25 -110 31 -32 69
                             -32 100 0 23 22 25 32 25 114 0 85 -1 91 -26 110 -35 28 -69 26 -99 -4z"
                             />
                             <path
-                                fill="#f79a53"
                                 className="my-line"
                                 d="M3455 2715 c-23 -22 -25 -32 -25 -110 0 -78 2 -88 25 -110 31 -32 69
                             -32 100 0 23 22 25 32 25 110 0 78 -2 88 -25 110 -13 14 -36 25 -50 25 -14 0
                             -37 -11 -50 -25z"
                             />
                             <path
-                                fill="#f79a53"
                                 className="my-line"
                                 d="M2545 2525 c-60 -59 -7 -192 99 -247 57 -29 143 -27 199 4 43 24 45
                             24 69 7 64 -47 174 -42 247 12 64 46 105 148 80 202 -11 24 -46 47 -73 47 -22

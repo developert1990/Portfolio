@@ -2,11 +2,12 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: $fontMono;
+    transition: all 0.2s ease-in-out;
 
     .navigation {
         display: flex;
@@ -15,7 +16,7 @@
         padding: 0 50px;
 
         svg {
-            fill: $lightGrey;
+            fill: $mainColor;
         }
     }
 
@@ -33,8 +34,27 @@
             &::before {
                 content: "0" counter(item) ".";
                 margin-right: 5px;
-                color: $lightOrange;
+                color: $mainColor;
             }
         }
     }
+
+    @include desktop {
+        .hamburger-react {
+            display: none;
+        }
+    }
+
+    @include mobile-and-tablet {
+        .menu {
+            display: none;
+        }
+    }
+}
+
+.nav-scrolled {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px -10px $mainShadow;
 }
