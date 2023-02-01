@@ -1,0 +1,24 @@
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    font-family: $fontMono;
+    position: relative;
+    align-items: center;
+
+    @include desktop {
+        #contact {
+            display: none;
+        }
+    }
+
+    @include mobile-and-tablet {
+        #contact {
+            margin-top: 25px;
+            ul {
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import "./swiper.scss";
+
+#testimonials {
+    img {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+    }
+
+    .testimonial-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .testimonial-detail-wrapper {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    .testimonial-name {
+        font-size: 14px;
+    }
+    .testimonial-role {
+        font-family: $fontMono;
+        font-size: 12px;
+    }
+    .testimonial-company {
+        color: $lightOrange;
+        font-size: 14px;
+    }
+    .testimonial-comment {
+        font-size: 12px;
+    }
+}

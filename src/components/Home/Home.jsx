@@ -1,6 +1,7 @@
 import anime from "animejs";
 import React, { useEffect } from "react";
 import TypeIt from "typeit-react";
+import { Contact } from "../Contact/Contact";
 
 export const Home = () => {
     useEffect(() => {
@@ -49,6 +50,7 @@ export const Home = () => {
                     See my Resume
                 </a>
             </div>
+            <Contact />
         </section>
     );
 };
