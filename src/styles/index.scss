@@ -7,6 +7,7 @@
 @import "./components/about.scss";
 @import "./components/skills.scss";
 @import "./components/projects.scss";
+@import "./components/experiences.scss";
 
 * {
     box-sizing: inherit;
@@ -18,7 +19,7 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     background-color: #000;
-    font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    font-family: $fontCalibre;
     line-height: 1.3;
     color: $lightGrey;
 }
@@ -44,6 +45,7 @@ a {
 }
 
 .numbered-heading {
+    font-weight: 500;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -60,7 +62,7 @@ a {
         bottom: 4px;
         margin-right: 10px;
         color: $lightOrange;
-        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+        font-family: $fontMono;
         font-size: clamp(16px, 3vw, 32px);
         font-weight: 400;
     }
@@ -76,6 +78,10 @@ a {
         background-color: $lightGrey;
         margin-top: 15px;
     }
+}
+
+li {
+    list-style: none;
 }
 
 @include desktop {

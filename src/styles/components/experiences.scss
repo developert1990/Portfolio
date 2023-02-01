@@ -1,0 +1,112 @@
+#experiences {
+    max-width: 900px;
+
+    .react-tabs {
+        width: 100%;
+    }
+
+    ul {
+        margin-right: 30px;
+        font-family: $fontMono;
+        li {
+            padding: 10px;
+            cursor: pointer;
+            padding-left: 20px;
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        .react-tabs__tab--selected {
+            color: $lightOrange;
+            background-image: $blackLinearBG;
+
+            border-left: 2px solid $lightOrange;
+        }
+    }
+
+    .tab-detail {
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .experience-feature > div {
+        margin-bottom: 10px;
+
+        span {
+            color: $lightOrange;
+        }
+
+        @include triangle;
+    }
+
+    .experience-period {
+        display: inline-block;
+    }
+
+    .experience-link {
+        margin-left: 20px;
+        padding-top: 6px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    @include desktop {
+        .react-tabs {
+            display: flex;
+            min-height: 310px;
+        }
+
+        .experience-role {
+            font-size: 22px;
+        }
+
+        .experience-period {
+            font-size: 13px;
+            font-family: $fontMono;
+        }
+        .experience-feature {
+            font-size: 16px;
+        }
+    }
+
+    @include tablet {
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-role {
+            font-size: 18px;
+        }
+
+        .experience-period {
+            font-size: 12px;
+            font-family: $fontMono;
+        }
+        .experience-feature {
+            font-size: 14px;
+        }
+    }
+
+    @include mobile {
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-role {
+            font-size: 18px;
+        }
+
+        .experience-period {
+            font-size: 12px;
+            font-family: $fontMono;
+        }
+        .experience-feature {
+            font-size: 14px;
+        }
+    }
+}
