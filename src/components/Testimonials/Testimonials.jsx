@@ -7,12 +7,14 @@ import "swiper/css/effect-cards";
 // import required modules
 import { EffectCards } from "swiper";
 import { testimonials } from "../../assets/data/testimonials";
+import { Fade } from "react-awesome-reveal";
 
 export const Testimonials = () => {
     return (
         <section id="testimonials">
-            <div className="numbered-heading">See What They Say About Me</div>
-
+            <Fade delay={0.1} cascade damping={0.1} className="numbered-heading">
+                See What They Say About Me
+            </Fade>
             <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                 {testimonials.map((testimonial, index) => {
                     return (

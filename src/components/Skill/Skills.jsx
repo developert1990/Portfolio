@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { skillsData } from "../../assets/data/skills";
 import { API_BASE } from "../../config";
 import { SkillCard } from "./SkillCard";
@@ -6,7 +7,9 @@ import { SkillCard } from "./SkillCard";
 export const Skills = () => {
     return (
         <section id="skills">
-            <div className="numbered-heading">My Skills</div>
+            <Fade delay={0.1} cascade damping={0.1} className="numbered-heading">
+                My Skills
+            </Fade>
             <div className="cards">
                 <div className="card">
                     {/* <span>1</span> */}

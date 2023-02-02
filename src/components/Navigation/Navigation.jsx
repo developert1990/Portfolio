@@ -1,8 +1,11 @@
 import anime from "animejs";
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useOutsideClick } from "../hooks/useOutsideClick";
 import { HamburgerIcon } from "./HamburgerIcon";
 
 export const Navigation = () => {
+    const [isOpen, setOpen] = useState(false);
+
     useEffect(() => {
         anime({
             targets: ".nav-anime",
@@ -12,16 +15,16 @@ export const Navigation = () => {
         });
     }, []);
 
-    const targetRef = useRef(null);
-    const handleScroll = useCallback(() => {
-        console.log("scroll");
+    const navBarRef = useRef(null);
+    const menuRef = useRef(null);
+
+    const handleScroll = () => {
         if (window.scrollY > 100) {
-            //130 일때
-            targetRef.current.classList.add("nav-scrolled");
+            navBarRef.current.classList.add("nav-scrolled");
         } else {
-            targetRef.current.classList.remove("nav-scrolled");
+            navBarRef.current.classList.remove("nav-scrolled");
         }
-    });
+    };
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -33,10 +36,28 @@ export const Navigation = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const menuElement = menuRef.current;
+        isOpen ? menuElement.classList.add("active") : menuElement.classList.remove("active");
+    }, [isOpen]);
+
+    const closeToggle = (id) => {
+        document.querySelector(`#${id}`).scrollIntoView({ behavior: "smooth" });
+        setOpen(false);
+    };
+
+    // 바깥쪽 클릭 이벤트
+    const handleOutsideClick = () => {
+        setOpen(false);
+    };
+
+    const ref = useOutsideClick(handleOutsideClick);
+
     return (
-        <div id="navigation-wrapper" ref={targetRef}>
-            <div className="navigation">
-                <a href="/">
+        <div id="navigation-wrapper" ref={navBarRef}>
+            <div className="navigation" ref={ref}>
+                {/* Logo */}
+                {/* <a href="/">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
                             <path
@@ -104,28 +125,28 @@ export const Navigation = () => {
                             />
                         </g>
                     </svg>
-                </a>
-                <ol className="menu">
-                    <li className="nav-anime">
-                        <a href="#about">About</a>
-                    </li>
-                    <li className="nav-anime">
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li className="nav-anime">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li className="nav-anime">
-                        <a href="#experiences">Experiences</a>
-                    </li>
-                    <li className="nav-anime">
-                        <a href="#testimonials">Testimonials</a>
-                    </li>
-                    <li className="nav-anime">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ol>
-                <HamburgerIcon />
+                </a> */}
+                <div className="menu" ref={menuRef}>
+                    <ol>
+                        <li className="nav-anime">
+                            <button onClick={() => closeToggle("about")}>About</button>
+                        </li>
+                        <li className="nav-anime">
+                            <button onClick={() => closeToggle("skills")}>Skills</button>
+                        </li>
+                        <li className="nav-anime">
+                            <button onClick={() => closeToggle("projects")}>Projects</button>
+                        </li>
+                        <li className="nav-anime">
+                            <button onClick={() => closeToggle("experiences")}>Experiences</button>
+                        </li>
+                        <li className="nav-anime">
+                            <button onClick={() => closeToggle("testimonials")}>Testimonials</button>
+                        </li>
+                    </ol>
+                </div>
+
+                <HamburgerIcon isOpen={isOpen} setOpen={setOpen} />
             </div>
         </div>
     );

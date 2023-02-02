@@ -2,11 +2,14 @@ import React from "react";
 import Avatar from "../Avatar/Avatar_wrapper";
 import SAITICON from "../../assets/imgs/education/saitLogo.png";
 import UNIVERSITY_ICON from "../../assets/imgs/education/gyungsangUniversity.png";
+import { Fade } from "react-awesome-reveal";
 
 export const About = () => {
     return (
         <section id="about">
-            <div className="numbered-heading">About Me</div>
+            <Fade delay={0.1} cascade damping={0.1} className="numbered-heading">
+                About Me
+            </Fade>
             <div className="about-detail">
                 <div className="avatar-wrapper">
                     <Avatar />

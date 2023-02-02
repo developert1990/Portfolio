@@ -9,7 +9,7 @@ export default function Model(props) {
     useEffect(() => {
         console.log("actions", actions);
         actions["Armature|mixamo.com|Layer0"].play();
-    }, []);
+    }, [actions]);
 
     return (
         <group ref={group} {...props} dispose={null}>

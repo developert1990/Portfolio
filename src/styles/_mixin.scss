@@ -37,3 +37,14 @@
         color: $mainColor;
     }
 }
+
+@mixin skill-card {
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        a {
+            margin-right: 15px;
+        }
+    }
+}

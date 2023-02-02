@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 import { projects } from "../../assets/data/projects";
 
 export const Projects = () => {
@@ -8,7 +9,9 @@ export const Projects = () => {
     };
     return (
         <section id="projects">
-            <div className="numbered-heading">What I've Built</div>
+            <Fade delay={0.1} cascade damping={0.1} className="numbered-heading">
+                What I've Built
+            </Fade>
             <div className="projects">
                 {projects.map((project, index) => {
                     return (

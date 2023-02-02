@@ -6,6 +6,7 @@
     font-family: $fontMono;
     position: relative;
     align-items: center;
+    font-size: 12px;
 
     @include desktop {
         #contact {

@@ -27,17 +27,23 @@ body {
 }
 
 section {
-    min-height: 100vh;
     padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
 }
 
 a {
     text-decoration: none;
+    color: $lightGrey;
+    &:hover {
+        color: $mainColor;
+        transition: all 0.2s ease-in-out;
+    }
+}
+button {
+    outline: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
     color: $lightGrey;
 
     &:hover {
@@ -48,7 +54,7 @@ a {
 
 .numbered-heading {
     font-weight: 500;
-    display: flex;
+    display: flex !important;
     -webkit-box-align: center;
     align-items: center;
     position: relative;
@@ -86,18 +92,34 @@ li {
     list-style: none;
 }
 
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 @include desktop {
-    secsion {
+    #about,
+    #skills,
+    #projects,
+    #experiences,
+    #testimonials {
+        padding: 100px 0;
+    }
+}
+
+@include mobile-and-tablet {
+    #home {
         height: 100vh;
+        padding: 0px;
     }
-}
-
-@include tablet {
-    #about {
-    }
-}
-
-@include mobile {
-    #about {
+    #about,
+    #skills,
+    #projects,
+    #experiences,
+    #testimonials {
+        padding: 90px 0;
     }
 }

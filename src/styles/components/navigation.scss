@@ -8,10 +8,12 @@
     justify-content: center;
     font-family: $fontMono;
     transition: all 0.2s ease-in-out;
+    z-index: 10;
+    margin-bottom: 100px;
 
     .navigation {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
         padding: 0 50px;
 
@@ -21,14 +23,16 @@
     }
 
     .menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px;
-        margin: 0px;
+        ol {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            margin: 0px;
+        }
 
         li {
-            margin: 0 5px;
+            margin-right: 15px;
             counter-increment: item 1;
 
             &::before {
@@ -47,13 +51,54 @@
 
     @include mobile-and-tablet {
         .menu {
-            display: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            right: -500px;
+            width: 400px;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            padding: 50px 10px;
+            background-color: #112240;
+            z-index: 10;
+            transition: all 0.3s ease-in-out;
+            ol {
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
+        .hamburger-react {
+            z-index: 10;
+        }
+        .menu.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            width: 400px;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            padding: 50px 10px;
+            background-color: #112240;
+            z-index: 10;
+
+            ol {
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
         }
     }
 }
 
 .nav-scrolled {
-    z-index: 10;
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px -10px $mainShadow;

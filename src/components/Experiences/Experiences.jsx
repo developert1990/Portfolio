@@ -1,11 +1,14 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { experiences } from "../../assets/data/experiences";
 
 export const Experiences = () => {
     return (
         <section id="experiences">
-            <div className="numbered-heading">Where I've Worked</div>
+            <Fade delay={0.1} cascade damping={0.1} className="numbered-heading">
+                Where I've Worked
+            </Fade>
             <Tabs>
                 <TabList>
                     {experiences.map((experience, index) => {

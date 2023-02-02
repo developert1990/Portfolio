@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Sling as Hamburger } from "hamburger-react";
 
-export const HamburgerIcon = () => {
-    const [isOpen, setOpen] = useState(false);
-
+export const HamburgerIcon = ({ isOpen, setOpen }) => {
     const handleToggle = () => {
         setOpen(!isOpen);
     };

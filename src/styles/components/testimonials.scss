@@ -1,6 +1,7 @@
-@import "./swiper.scss";
+@import "./library/swiper.scss";
 
 #testimonials {
+    max-width: 900px;
     img {
         border-radius: 50%;
         width: 70px;

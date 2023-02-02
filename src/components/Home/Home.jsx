@@ -26,7 +26,7 @@ export const Home = () => {
                     <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
                 </svg>
             </div>
-            <div className="titleMessage">
+            <div className="title-message">
                 <div className="home-anime">
                     <h1>Hi, I am</h1>
                 </div>
@@ -46,7 +46,7 @@ export const Home = () => {
                 <div>
                     <p>I'm a web developer with a strong passion for learning and great interpersonal skills with experiences in modern web technologies.</p>
                 </div>
-                <a className="resume-button" href="https://docs.google.com/file/d/17rMjh9gLs50RY5yzT59bz3VjLW_dEqHqRJdDLH2saTM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a className="resume-button" href="https://docs.google.com/file/d/1mBlL6x9Vr7XRVah3nhf387bCzLdBggfY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     See my Resume
                 </a>
             </div>
