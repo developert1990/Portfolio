@@ -2,6 +2,7 @@ import IMG_ABRAHAM from "../imgs/testimonials/testimonial(Abraham).jpg";
 import IMG_IBRAHIMA from "../imgs/testimonials/Ibrahima_Toure.jpeg";
 import IMG_MIN from "../imgs/testimonials/Min_Kim.jpeg";
 import IMG_STEPHEN from "../imgs/testimonials/stephen_wensley.jpeg";
+import IMG_JESSE from "../imgs/testimonials/jesse_chaulk.jpeg";
 
 export const testimonials = [
     {
@@ -28,9 +29,16 @@ export const testimonials = [
         comment: "Sangmean is a very comfortable around people. He does not hesitate to learn and enjoys acquiring new knowledge. He has a greate passion for coding. Above all, he has excellent problem-solving skills",
         img: IMG_ABRAHAM,
     },
-
     {
         id: 4,
+        role: "Lead Software Engineer",
+        name: "Jesse Chaulk, P.Eng",
+        company: "Acuspire",
+        comment: "Sangmean is a wonderful person and a great professional who loves his craft. He performed so well in the coding interview that I hired him on the spot. I highly recommend him to anyone looking for a solid candidate with amazing growth potential!",
+        img: IMG_JESSE,
+    },
+    {
+        id: 5,
         role: "Web Development Specialist",
         name: "Ibrahima Touré",
         company: "GoodsZilla",
