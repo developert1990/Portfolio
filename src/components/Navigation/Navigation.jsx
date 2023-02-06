@@ -1,6 +1,7 @@
 import anime from "animejs";
 import React, { useEffect, useRef, useState } from "react";
 import { useOutsideClick } from "../hooks/useOutsideClick";
+import { ThemeToggleButton } from "../ThemeButton/ThemeToggleButton";
 import { HamburgerIcon } from "./HamburgerIcon";
 
 export const Navigation = () => {
@@ -142,6 +143,9 @@ export const Navigation = () => {
                         </li>
                         <li className="nav-anime">
                             <button onClick={() => closeToggle("testimonials")}>Testimonials</button>
+                        </li>
+                        <li className="nav-anime">
+                            <ThemeToggleButton />
                         </li>
                     </ol>
                 </div>

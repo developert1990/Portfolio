@@ -18,7 +18,7 @@
         padding: 0 50px;
 
         svg {
-            fill: $mainColor;
+            fill: var(--main-color);
         }
     }
 
@@ -38,7 +38,7 @@
             &::before {
                 content: "0" counter(item) ".";
                 margin-right: 5px;
-                color: $mainColor;
+                color: var(--main-color);
             }
         }
     }
@@ -101,5 +101,5 @@
 .nav-scrolled {
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px -10px $mainShadow;
+    box-shadow: 0 10px 30px -10px var(--main-shadow);
 }

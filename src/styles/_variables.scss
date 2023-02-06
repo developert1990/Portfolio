@@ -1,6 +1,9 @@
-$mainColor: #86bafd;
-$mainTint: #86bafd2d;
-$mainShadow: #86bafdd4;
+:root {
+    --main-color: #86bafd;
+    --main-shadow: #86bafdd4;
+    --main-tint: #86bafd2d;
+}
+
 $smoothWhite: #eeeeee;
 $lightGrey: #b7bdd1;
 

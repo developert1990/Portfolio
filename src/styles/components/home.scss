@@ -1,6 +1,6 @@
 #home {
     h1 {
-        color: $mainColor;
+        color: var(--main-color);
         font-family: $fontMono;
     }
     h2 {
@@ -19,9 +19,9 @@
     }
 
     .resume-button {
-        color: $mainColor;
+        color: var(--main-color);
         background-color: transparent;
-        border: 1px solid $mainColor;
+        border: 1px solid var(--main-color);
         border-radius: 4px;
         padding: 1.25rem 1.75rem;
         font-size: 14px;
@@ -31,7 +31,7 @@
         margin-top: 50px;
         display: inline-block;
         &:hover {
-            background-color: $mainTint;
+            background-color: var(--main-tint);
             outline: none;
         }
     }
