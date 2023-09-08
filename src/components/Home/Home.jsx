@@ -46,7 +46,7 @@ export const Home = () => {
                 <div>
                     <p>I'm a web developer with a strong passion for learning and great interpersonal skills with experiences in modern web technologies.</p>
                 </div>
-                <a className="resume-button" href="https://docs.google.com/file/d/1mBlL6x9Vr7XRVah3nhf387bCzLdBggfY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a className="resume-button" href="https://drive.google.com/file/d/1mBlL6x9Vr7XRVah3nhf387bCzLdBggfY/view" target="_blank" rel="noopener noreferrer">
                     See my Resume
                 </a>
             </div>

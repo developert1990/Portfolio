@@ -10,11 +10,22 @@ export const testimonials = [
         role: "Senior Software Developer",
         name: "Min Kim",
         company: "Atlassian",
-        comment: "Sangmean is a good communicator and often goes above and beyond to research and learn things. He is a quick learner and has great talents and aptitude for web development.",
+        comment: `I recommend Sangmean as an outstanding software developer. I had the pleasure of mentoring and working with him, and it's been inspiring to see their growth.
+        Sangmean is a motivated and skilled developer with a knack for JavaScript and a dedication to learning. He has an innate ability to quickly grasp and apply new concepts, turning them into practical solutions.
+        I was also impressed by his commitment to improvement. He actively sought feedback and never backed down from challenges, reflecting a true passion for software development.
+        With his attitude and aptitude, I'm confident they'll continue to thrive, making valuable contributions wherever he is.`,
         img: IMG_MIN,
     },
+    // {
+    //     id: 2,
+    //     role: "Web Developer",
+    //     name: "Lord Tapulao",
+    //     company: "Atlassian",
+    //     comment: `It is with great pleasure that I write this LinkedIn recommendation for Sangmean. I have had the privilege of working closely with him and can attest to his exceptional skills as a developer. Sangmean's profound knowledge and understanding of Vue.js and backend logic have been instrumental in the success of our projects. He consistently demonstrates a willingness to collaborate, readily offering his expertise whenever needed. What truly sets Sangmean apart is his unwavering commitment to delivering results; his work ethic is truly impeccable. His adaptability and technical prowess are reflected in his coding, which is not only efficient but also optimized. I have been consistently impressed by his ability to swiftly acquire new skills and channel his focus into maintaining a streamlined codebase. Without a doubt, I recommend Sangmean to any team in need of a skilled, committed, and technically adept developer.`,
+    //     img: IMG_MIN,
+    // },
     {
-        id: 2,
+        id: 3,
         role: "Founder of JobOffer.com and Acuspire.ai / CTO",
         name: "Stephen Wensley",
         company: "Acuspire",
@@ -22,7 +33,7 @@ export const testimonials = [
         img: IMG_STEPHEN,
     },
     {
-        id: 3,
+        id: 4,
         role: "Senior Software Developer",
         name: "Abraham Sohn",
         company: "Siemens",
@@ -30,7 +41,7 @@ export const testimonials = [
         img: IMG_ABRAHAM,
     },
     {
-        id: 4,
+        id: 5,
         role: "Lead Software Engineer",
         name: "Jesse Chaulk, P.Eng",
         company: "Acuspire",
@@ -38,7 +49,7 @@ export const testimonials = [
         img: IMG_JESSE,
     },
     {
-        id: 5,
+        id: 6,
         role: "Web Development Specialist",
         name: "Ibrahima Touré",
         company: "GoodsZilla",

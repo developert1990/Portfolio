@@ -43,6 +43,7 @@ import L_SOURCETREE from "../imgs/skills/sourcetree.png";
 import L_LARAVEL from "../imgs/skills/laravel.png";
 import L_PHP from "../imgs/skills/php.png";
 import L_VUE from "../imgs/skills/vue.png";
+import L_NESTJS from "../imgs/skills/nestjs.svg";
 
 export const skillsData = {
     frontend: [
@@ -156,6 +157,12 @@ export const skillsData = {
             imgAltText: "LARAVEL",
             imgSrc: L_LARAVEL,
             skillName: "Laravel",
+        },
+        {
+            link: "https://nestjs.com/",
+            imgAltText: "Nest.js",
+            imgSrc: L_NESTJS,
+            skillName: "Nest.js",
         },
     ],
     hostingPlatforms: [
